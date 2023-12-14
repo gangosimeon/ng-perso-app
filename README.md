@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NgPersoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# ng-perso-app
+Personnal trainning !
+>>>>>>> 1e89230dbc3adca9d4b8f7ef45e710b9da7916c7
