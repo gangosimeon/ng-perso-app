@@ -12,21 +12,22 @@
 
     <div class="row mb-3 mt-3">
         <div class="col-md-4">
-            Recherche: {{motRech}}
+          Recherche:  {{filterHotel}}
         </div>
         <div class="col-md-8">
-            <input type="text" class="form-control" [(ngModel)]="motRech">
+            <input type="text" class="form-control" [(ngModel)]="filterHotel">
         </div>
     </div>
 
     <div class="row  d-flex">
-        <div class="card m-2 mb-4" style="width: 22.7rem;" *ngFor="let hotel of hotels">
-            <img [src]="hotel.img" [title]="hotel.nom" class="card-img-top" [alt]="hotel.nom">
+        <div class="card m-2 mb-4" style="width: 22.7rem;" *ngFor="let hotel of filteredHotels">
+            <img [src]="hotel.imgUrl" [title]="hotel.nom" class="card-img-top" [alt]="hotel.nom">
             <div class="card-body">
-            <h5 class="card-title">{{hotel.nom | uppercase}}</h5>
-            <p class="card-text justify-content">{{hotel.description }}</p>
-            <h5 class="card-text" *ngIf="hotel.prix !=null ">Prix: {{hotel.prix | currency: 'EUR' :'symbol':'1.2-2':'fr'}}</h5>
-            <a href="#" class="btn btn-primary" *ngIf="bool">Voir plus...</a>
+                <h5 class="card-title">{{hotel.nom | uppercase}}</h5>
+                <p class="card-text justify-content">{{hotel.description }}</p>
+                <h5 class="card-text" *ngIf="hotel.prix !=null ">Prix: {{hotel.prix | currency : 'EUR' :'symbol':'1.2-2':'fr'}}</h5>
+                <app-star-rating [rating]="hotel.rating"></app-star-rating>
+                <a href="#" class="btn btn-primary" *ngIf="bool">Voir plus...</a>
             </div>
         </div>
     </div>
