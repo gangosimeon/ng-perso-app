@@ -4,5 +4,5 @@ export interface Hotel{
     imgUrl:string;
     prix:number;
     description:string;
-    rating:number
+    rating:number;
 }
