@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, registerLocaleData } from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
 import LocaleFr from '@angular/common/locales/fr';
 import { ReplaceComma } from './shared/pipes/replaceComma';
 import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
+import { HomeComponent } from './home/home.component';
 registerLocaleData(LocaleFr);
 
 @NgModule({
@@ -16,13 +18,16 @@ registerLocaleData(LocaleFr);
     AppComponent,
     HotelListComponent,
     ReplaceComma,
-    StarRatingComponent
+    StarRatingComponent,
+    HomeComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [
     {provide:'LOCALE_ID', useValue:'fr-FR'}

@@ -23,9 +23,21 @@ export class HotelListComponent implements OnInit{
 
     
   ngOnInit(): void {
-   this.hotels=this._hotelService.getHotels();
-   this.filteredHotels=this.hotels;
+   this.getHotelsList();
+  //  this.filteredHotels=this.hotels;
    this.filterHotel=""
+  }
+
+  getHotelsList(){
+    this._hotelService.getHotels().subscribe({
+     next: (hotels) => {
+      this.hotels = hotels;
+      this.filteredHotels=this.hotels;
+      console.log(hotels)
+     } 
+    });
+    
+    
   }
    /**
      * get
