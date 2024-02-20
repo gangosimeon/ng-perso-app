@@ -30,10 +30,19 @@
                 <h5 class="card-title">{{hotel.nom | uppercase}}</h5>
                 <p class="card-text justify-content">{{hotel.description }}</p>
                 <h5 class="card-text" *ngIf="hotel.prix !=null ">Prix: {{hotel.prix | currency : 'EUR' :'symbol':'1.2-2':'fr'}}</h5>
-                <app-star-rating 
-                [rating]="hotel.rating"
-                (receiveRatingClicked)="receiveRatingClicked($event)"
-                ></app-star-rating>
+                
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <app-star-rating 
+                    [rating]="hotel.rating"
+                    (receiveRatingClicked)="receiveRatingClicked($event)"
+                    ></app-star-rating>
+
+                    <span class="material-icons bg-info p-2 rounded-circle btn"
+                    [routerLink]="['/hotels',hotel.id]">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+               
                 <a href="#" class="btn btn-primary" *ngIf="bool">Voir plus...</a>
             </div>
         </div>

@@ -11,16 +11,17 @@ import LocaleFr from '@angular/common/locales/fr';
 import { ReplaceComma } from './shared/pipes/replaceComma';
 import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
 import { HomeComponent } from './home/home.component';
+import { HotelDetailComponent } from './hotel-list/hotel-detail/hotel-detail.component';
 registerLocaleData(LocaleFr);
 
 @NgModule({
   declarations: [
     AppComponent,
     HotelListComponent,
-    ReplaceComma,
+    ReplaceComma,//Permet de remplacer une virgule par un point 
     StarRatingComponent,
     HomeComponent,
-  
+    HotelDetailComponent,  
   ],
   imports: [
     BrowserModule,
